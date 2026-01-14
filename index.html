@@ -26,8 +26,6 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             position: sticky; top: 0; z-index: 100;
         }
-        .logo { font-weight: 700; font-size: 1.1rem; color: var(--brand-blue); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
-        .hero .logo { color: var(--white); display: block; margin-bottom: 20px; }
         .nav-links a { margin-left: 20px; text-decoration: none; color: var(--brand-blue); font-weight: 600; font-size: 0.85rem; transition: 0.3s; }
         .nav-links a:hover { color: var(--brand-green); }
 
@@ -37,6 +35,7 @@
             background-size: cover; background-position: center;
             color: var(--white); padding: 120px 10%; text-align: center;
         }
+        .hero-logo img { height: 100px; width: auto; margin-bottom: 20px; }
         .hero h1 { color: var(--white); font-size: 2.8rem; margin-bottom: 20px; line-height: 1.2; }
         .hero p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 35px; max-width: 800px; margin-left: auto; margin-right: auto; }
 
@@ -92,9 +91,11 @@
 </nav>
 
 <section class="hero">
-    <a href="#" class="logo"> <img src="YOUR_IMAGE_NAME_HERE.png" alt="Bernard Consulting" style="height: 50px; width: auto; display: block;">  </a>
+    <div class="hero-logo">
+        <img src="YOUR_LOGO_FILENAME.png" alt="Bernard Consulting Logo">
+    </div>
     <h1>Hiring Simplified. Results Guaranteed.</h1>
-    <p>Premium finance and real estate talent acquisition with total price certainty. We stand firm in our commitment to finding your next top performer without the high-cost commission percentages.</p>
+    <p>Premium finance and real estate talent acquisition with total price certainty. We stand firm in our commitment to finding your next top performer without the high-cost commission percentages. We find the talent while you focus on your customers and brand.</p>
     <a href="#tiers" class="btn">View Placement Tiers</a>
 </section>
 
