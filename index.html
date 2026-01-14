@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bernard Consulting | Elite Talent Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #0a2540;
+            --brand-green: #00d1b2;
+            --light-bg: #f6f9fc;
+            --text-main: #424770;
+            --white: #ffffff;
+            --border-color: #e1e4e8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--text-main); line-height: 1.6; background: var(--light-bg); scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--brand-blue); }
+
+        /* Navigation */
+        nav {
+            background: var(--white); padding: 1.2rem 10%;
+            display: flex; justify-content: flex-end; align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-weight: 700; font-size: 1.1rem; color: var(--brand-blue); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
+        .hero .logo { color: var(--white); display: block; margin-bottom: 20px; }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--brand-blue); font-weight: 600; font-size: 0.85rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--brand-green); }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(10, 37, 64, 0.9), rgba(10, 37, 64, 0.9)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover; background-position: center;
+            color: var(--white); padding: 120px 10%; text-align: center;
+        }
+        .hero h1 { color: var(--white); font-size: 2.8rem; margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 35px; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+        /* Pricing Tiers */
+        .section { padding: 80px 10%; }
+        .container-narrow { max-width: 1000px; margin: 0 auto; }
+        .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
+        .tier-card { 
+            background: var(--white); padding: 40px; border-radius: 12px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); text-align: center;
+            transition: 0.3s; border-top: 5px solid var(--brand-green);
+        }
+        .tier-card:hover { transform: translateY(-10px); }
+        .price { font-size: 3rem; font-weight: 700; color: var(--brand-blue); display: block; margin: 15px 0; }
+        .price span { font-size: 1rem; color: var(--text-main); font-weight: 400; }
+
+        /* General UI */
+        .btn { display: inline-block; padding: 15px 35px; background: var(--brand-green); color: var(--brand-blue); text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s; border: none; cursor: pointer; text-align: center; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,209,178,0.3); }
+        
+        /* Features */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 50px; }
+        .feature-item h3 { margin-bottom: 10px; font-size: 1.1rem; }
+        
+        /* Footer */
+        footer { background: var(--brand-blue); color: var(--white); padding: 60px 10% 40px; text-align: center; }
+        .footer-links { margin-top: 25px; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
+        .footer-links a { color: rgba(255,255,255,0.6); font-size: 0.85rem; text-decoration: underline; transition: 0.3s; }
+        .footer-links a:hover { color: var(--brand-green); }
+
+        /* Policy Sections */
+        .policy-content { display: none; background: #fff; color: var(--text-main); text-align: left; padding: 40px; margin-top: 30px; border-radius: 8px; }
+        .policy-content:target { display: block; }
+        .policy-content h3 { margin-bottom: 15px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .tier-grid { margin-top: 20px; }
+            .section { padding: 60px 5%; }
+            .footer-links { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#tiers">Pricing</a>
+        <a href="#advantage">Advantage</a>
+        <a href="#contact">Hire a Candidate</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <a href="#" class="logo">Bernard Consulting</a>
+    <h1>Hiring Simplified. Results Guaranteed.</h1>
+    <p>Premium finance and real estate talent acquisition with total price certainty. We stand firm in our commitment to finding your next top performer without the high-cost commission percentages.</p>
+    <a href="#tiers" class="btn">View Placement Tiers</a>
+</section>
+
+<section class="section" id="network" style="background: var(--brand-blue); color: var(--white); padding: 60px 10%;">
+    <div class="container-narrow" style="text-align: center;">
+        <h2 style="color: var(--white); margin-bottom: 20px;">Industry Insider Expertise</h2>
+        <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; line-height: 1.6; opacity: 0.9;">
+            Benefit from a recruiter who knows the game, is active in the finance and real estate industry, and has an established network of finance and real estate professionals in house.
+        </p>
+    </div>
+</section>
+
+<section class="section" id="tiers" style="padding-top: 40px;">
+    <div class="container-narrow">
+        <div class="tier-grid">
+            <div class="tier-card">
+                <h3>Full-Time</h3>
+                <p>Permanent Executive & Staffing</p>
+                <span class="price">$3,000 <span>/per hire</span></span>
+                <ul style="list-style:none; margin: 20px 0; font-size: 0.9rem;">
+                    <li>45-Day Guarantee</li>
+                    <li>Full Background Vetting</li>
+                    <li>Direct Placement</li>
+                </ul>
+                <a href="mailto:Bernardconsultingservices@gmail.com?subject=Full-Time Placement Inquiry" class="btn">Hire Now</a>
+            </div>
+
+            <div class="tier-card" style="border-top-color: var(--brand-blue);">
+                <h3>Part-Time</h3>
+                <p>Fractional & Flexible Staffing</p>
+                <span class="price">$2,000 <span>/per hire</span></span>
+                <ul style="list-style:none; margin: 20px 0; font-size: 0.9rem;">
+                    <li>45-Day Guarantee</li>
+                    <li>Skilled Professionals</li>
+                    <li>Flexible Terms</li>
+                </ul>
+                <a href="mailto:Bernardconsultingservices@gmail.com?subject=Part-Time Placement Inquiry" class="btn" style="background: var(--brand-blue); color: white;">Hire Now</a>
+            </div>
+
+            <div class="tier-card">
+                <h3>Contract</h3>
+                <p>Project-Based Specialists</p>
+                <span class="price">$1,000 <span>/per hire</span></span>
+                <ul style="list-style:none; margin: 20px 0; font-size: 0.9rem;">
+                    <li>Immediate Availability</li>
+                    <li>Targeted Skillsets</li>
+                    <li>Zero Long-term Risk</li>
+                </ul>
+                <a href="mailto:Bernardconsultingservices@gmail.com?subject=Contract Placement Inquiry" class="btn">Hire Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <div class="container-narrow">
+        <h2 style="border-left: 5px solid var(--brand-green); padding-left: 20px; margin-bottom: 20px;">Precision Recruiting</h2>
+        <p>At Bernard Consulting Services LLC, we apply the same institutional-grade rigors to talent acquisition as we do to financial consulting. We don't just "match resumes"—we vet for culture, competency, and long-term commitment. We leverage 20 years of relationships in the finance and real estate industries to bring you top candidates.</p>
+    </div>
+</section>
+
+<section class="section" id="advantage" style="background: white;">
+    <div class="container-narrow">
+        <h2 style="text-align: center; margin-bottom: 50px;">The Bernard Consulting Advantage</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div style="color: var(--brand-green); font-size: 1.5rem; margin-bottom: 10px;">✔</div>
+                <h3>No Percentage Games</h3>
+                <p>Standard agencies charge 20% of salary. We charge a flat fee. You save thousands as your hires grow.</p>
+            </div>
+            <div class="feature-item">
+                <div style="color: var(--brand-green); font-size: 1.5rem; margin-bottom: 10px;">✔</div>
+                <h3>45-Day Guarantee</h3>
+                <p>We stand firm in our placements. If they aren't the right fit within 45 days, we replace them for free.</p>
+            </div>
+            <div class="feature-item">
+                <div style="color: var(--brand-green); font-size: 1.5rem; margin-bottom: 10px;">✔</div>
+                <h3>Procuring Cause Security</h3>
+                <p>Our systematic introduction process ensures that every candidate we present is tracked and protected.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container-narrow">
+        <h2>Ready to Scale Your Team?</h2>
+        <p style="margin: 20px 0; opacity: 0.8;">Contact us to begin your candidate search today.</p>
+        <a href="mailto:Bernardconsultingservices@gmail.com" style="color:var(--brand-green); text-decoration:none; font-weight:700;">Bernardconsultingservices@gmail.com</a>
+        
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#tiers">Pricing</a>
+            <a href="#advantage">Advantage</a>
+            <a href="#privacy-policy">Privacy Policy</a>
+            <a href="#terms-conditions">Terms & Conditions</a>
+        </div>
+
+        <div id="privacy-policy" class="policy-content">
+            <h3>Privacy Policy</h3>
+            <p>Your privacy is important to us. Bernard Consulting Services LLC collects minimal data to facilitate talent matching. We do not sell your data to third parties. By using our site, you agree to our data handling practices focused on secure recruitment.</p>
+            <a href="#contact" style="font-size: 0.8rem; color: var(--brand-blue);">Close</a>
+        </div>
+
+        <div id="terms-conditions" class="policy-content">
+            <h3>Terms & Conditions</h3>
+            <p>All placements are subject to our flat-fee structure and 45-day guarantee. Client engagement begins upon the formal introduction of a candidate. Unauthorized circumvention of our hiring process is strictly prohibited under procuring cause security protocols.</p>
+            <a href="#contact" style="font-size: 0.8rem; color: var(--brand-blue);">Close</a>
+        </div>
+        
+        <p style="margin-top: 40px; font-size: 0.75rem; opacity: 0.5;">&copy; 2026 Bernard Consulting Services LLC. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
